@@ -2,7 +2,8 @@ import numpy as np
 
 import os
 import tensorflow as tf
-from tensorflow.contrib.tensorboard.plugins import projector
+from tensorboard.plugins import projector
+#from tensorflow.contrib.tensorboard.plugins import projector
 from scipy.misc import imsave
 import sklearn.cluster
 from sklearn.metrics import silhouette_score
