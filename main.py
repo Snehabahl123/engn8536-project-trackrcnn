@@ -5,8 +5,8 @@ import os
 from core.Engine import Engine
 from core.Config import Config
 from core.Log import log
-import tensorflow.compat.v1 as tf
-#import tensorflow as tf
+import tensorflow as tf
+#import tensorflow.compat.v1 as tf
 
 
 def init_log(config):

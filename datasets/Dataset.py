@@ -75,14 +75,14 @@ class AbstractDataset(ABC):
     return example
 
   def load_image(self, img_filename):
-    img_data = tf.read_file(img_filename)
+    img_data = tf.io.read_file(img_filename)
     img = tf.image.decode_image(img_data, channels=3)
     img = tf.image.convert_image_dtype(img, tf.float32)
     img.set_shape((None, None, 3))
     return img
 
   def load_annotation(self, img, img_filename, annotation_filename):
-    ann_data = tf.read_file(annotation_filename)
+    ann_data = tf.io.read_file(annotation_filename)
     ann = tf.image.decode_image(ann_data, channels=1)
     ann.set_shape(img.get_shape().as_list()[:-1] + [1])
     ann = self.postproc_annotation(annotation_filename, ann)
