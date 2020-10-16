@@ -1,6 +1,6 @@
 {
   # Engine settings
-  "model": "conv3d_sep2",
+  "model": "conv3d_sep2_tt",
   "task": "train_no_val",
   "dataset": "KITTI_segtrack",
   "log_verbosity": 5,
