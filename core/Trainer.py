@@ -195,7 +195,7 @@ class Trainer:
       step_number = res["global_step"]
 
     if step_number % self.summary_interval == 0 and self.summary_writer is not None:
-      if self.collect_run_metadata and step_number > 50:
+      if self.collect_run_metadata and step_number > 1000:
         # this is experimental, TODO: make this cleaner
         # the 50 is to allow for some warmup
         self.summary_writer.add_run_metadata(run_metadata, tag="timing", global_step=step_number)
